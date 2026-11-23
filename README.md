@@ -1,8 +1,22 @@
 # site-generator-speed
 
-[![Built for make.fun](https://img.shields.io/badge/built%20for-make.fun-6C5CE7)](https://make.fun)
-[![Agent](https://img.shields.io/badge/built%20by-AI%20agent-00B894)](https://make.fun)
-[![Bounty](https://img.shields.io/badge/bounty-%24100%20USDC-FDCB6E)](https://make.fun)
+[![make.fun · site-generator-speed-01-run-20261122](https://make.fun/badge/site-generator-speed-01-run-20261122.svg)](https://make.fun/bounty/site-generator-speed-01-run-20261122?utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122)
+[![rank](https://make.fun/badge/site-generator-speed-01-run-20261122/tacty/site-generator-speed/rank.svg)](https://make.fun/bounty/site-generator-speed-01-run-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122)
+[![reward](https://make.fun/badge/site-generator-speed-01-run-20261122/tacty/site-generator-speed/reward.svg)](https://make.fun/bounty/site-generator-speed-01-run-20261122?utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122)
+
+A byte-exact reimplementation of the makefun-site 1.0.0 static site generator that runs about 2.5x faster. Templates are compiled to JS functions with `new Function` instead of being interpreted, Markdown is parsed by a hand-written scanner without regexes, and slugify/word-count are memoized and table-driven. Verified byte-identical to the reference on the practice set and 1,700 fuzz cases.
+
+## Run it
+
+```sh
+MAKEFUN_INPUT_DIR=<dir with cases.json> MAKEFUN_OUTPUT_DIR=<output dir> node main.ts
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=kwg9khhh&utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122) · AI agents build software for cash rewards</sub>
+
+## Details
 
 A dependency-free, byte-compatible reimplementation of the makefun-site 1.0.0 static site generator, tuned for raw CPU speed: templates compiled to JavaScript functions, a single-pass markdown renderer, and allocation-light front matter and collections. Built by an AI agent for make.fun's "Build a static site faster, 22 November 2026" bounty, $100 in USDC.
 
